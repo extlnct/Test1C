@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест 1С - Главная</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff3333 0%, #ff6666 50%, #ff9999 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .tests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .test-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .test-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff3333, #ffcc00);
+        }
+
+        .test-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: #ff3333;
+        }
+
+        .test-card__number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff3333;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .test-card__title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .test-card__description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .test-card__meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-top: 15px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .test-card__questions {
+            color: #ff3333;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .test-card__difficulty {
+            background: #fff9e6;
+            color: #cc9900;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .test-card__link {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(135deg, #ff3333, #ff6666);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .test-card__link:hover {
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+            box-shadow: 0 5px 15px rgba(255, 51, 51, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: white;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .tests-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .test-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .test-card {
+                padding: 20px;
+            }
+
+            .test-card__number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Система тестирования 1С</h1>
+        <p>Выберите тест для проверки знаний</p>
+    </div>
+
+    <div class="tests-grid">
+        <div class="test-card">
+            <div class="test-card__number">01</div>
+            <h3 class="test-card__title">Справочники</h3>
+            <p class="test-card__description">Создание и настройка справочников, иерархия, реквизиты и формы в 1С</p>
+            <div class="test-card__meta">
+                <span class="test-card__questions">20 вопросов</span>
+                <span class="test-card__difficulty">Начальный</span>
+            </div>
+            <a href="index1.html" class="test-card__link">Начать тест</a>
+        </div>
+
+        <div class="test-card">
+            <div class="test-card__number">02</div>
+            <h3 class="test-card__title">Документы</h3>
+            <p class="test-card__description">Документы и их проведение, табличные части, автонумерация и обраб-ки событий</p>
+            <div class="test-card__meta">
+                <span class="test-card__questions">20 вопросов</span>
+                <span class="test-card__difficulty">Средний</span>
+            </div>
+            <a href="index2.html" class="test-card__link">Начать тест</a>
+        </div>
+
+        <div class="test-card">
+            <div class="test-card__number">03</div>
+            <h3 class="test-card__title">Теоретический</h3>
+            <p class="test-card__description">Модули, формы и контекст выполнения: клиент-серверная архитектура в 1С</p>
+            <div class="test-card__meta">
+                <span class="test-card__questions">20 вопросов</span>
+                <span class="test-card__difficulty">Средний</span>
+            </div>
+            <a href="index3.html" class="test-card__link">Начать тест</a>
+        </div>
+        
+
+    </div>
+
+
+    <div style="margin: 25px; display: flex; ">
+            <div class="test-card" style="margin: 0 25px; width: 400px;">
+                <div class="test-card__number">04</div>
+                <h3 class="test-card__title">Регистры накопления</h3>
+                <p class="test-card__description">Регистры накопления: остатки, обороты, движения документов и целостность данных</p>
+                <div class="test-card__meta">
+                    <span class="test-card__questions">20 вопросов</span>
+                    <span class="test-card__difficulty">Продвинутый</span>
+                </div>
+                <a href="index4.html" class="test-card__link">Начать тест</a>
+            </div>
+
+            <div class="test-card" style="width: 400px;">
+                <div class="test-card__number">05</div>
+                <h3 class="test-card__title">Простой отчет</h3>
+                <p class="test-card__description">СКД: создание отчетов, компоновка данных, параметры и виртуальные таблицы</p>
+                <div class="test-card__meta">
+                    <span class="test-card__questions">20 вопросов</span>
+                    <span class="test-card__difficulty">Продвинутый</span>
+                </div>
+                <a href="index5.html" class="test-card__link">Начать тест</a>
+            </div>
+        </div>
+
+    <div class="footer">
+        <p>Система тестирования знаний 1С:Предприятие © 2024</p>
+    </div>
+</body>
+
+</html>
