@@ -1308,6 +1308,268 @@ const questionsByPage = {
                 correctAnswer: 0
             }
         ]
+    },
+    'index6.html': { // ЕГАИС
+        'A': [
+            {
+                question: "Что такое ЕГАИС?",
+                options: [
+                    "Единая государственная автоматизированная информационная система для учета древесины.",
+                    "Система для онлайн-проверки штрихкодов любых товаров.",
+                    "Автоматизированная система для контроля объема производства и оборота алкогольной продукции.",
+                    "Внутренняя программа учета для розничных магазинов."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Какова основная задача УТМ (Универсального транспортного модуля)?",
+                options: [
+                    "Печатать акцизные марки.",
+                    "Осуществлять обмен данными между участником оборота и системой ЕГАИС.",
+                    "Формировать декларации об оборотах пива.",
+                    "Сканировать штрихкоды с бутылок."
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Что означает статус акцизной марки «в наличии» в ЕГАИС?",
+                options: [
+                    "Марка была списана и больше не числится в системе.",
+                    "Марка зарезервирована, но не подтверждена для продажи.",
+                    "Марка числится на остатках у организации и может быть реализована.",
+                    "Марка не была зарегистрирована в системе при приемке."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Какой статус марки означает, что алкогольная продукция должна быть списана с баланса?",
+                options: [
+                    "«в резерве»",
+                    "«к списанию»",
+                    "«не подтверждена»",
+                    "«в наличии(к отмене проведения)»"
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Для проверки статуса отдельной акцизной марки необходимо перейти на сайт:",
+                options: [
+                    "egais.ru",
+                    "fsrar.ru",
+                    "check1.fsrar.ru",
+                    "utm.fsrar.ru"
+                ],
+                correctAnswer: 2
+            }
+        ],
+        'B': [
+            {
+                question: "Что передает производитель алкогольной продукции в системе ЕГАИС?",
+                options: [
+                    "Справку Б.",
+                    "Товарно-транспортную накладную (ТТН).",
+                    "Справку А.",
+                    "Универсальный транспортный модуль (УТМ)."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "В каком виртуальном хранилище ЕГАИС ведется поштучный учет кодов акцизных марок?",
+                options: [
+                    "Регистр №1",
+                    "Регистр №2",
+                    "Регистр №3",
+                    "Регистр №4"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Статус марки «вскрытая бутылка» означает, что:",
+                options: [
+                    "бутылка была вскрыта для дегустации.",
+                    "марка была считана и зафиксирована для целей списания, бутылка больше не в обороте.",
+                    "продукция испорчена и подлежит возврату поставщику.",
+                    "это промежуточный статус при приемке товара."
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Что такое FSRAR ID?",
+                options: [
+                    "Идентификатор бутылки алкоголя.",
+                    "Пароль для входа в личный кабинет ЕГАИС.",
+                    "Уникальный идентификационный номер участника оборота алкоголя.",
+                    "Номер акцизной марки."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Процедура «Запросить марки по всем справкам №2» выполняется для:",
+                options: [
+                    "формирования отчета «Остатки акцизных марок с их статусом».",
+                    "подтверждения накладной от поставщика.",
+                    "списания алкоголя с виртуального склада.",
+                    "проверки легальности одной конкретной марки."
+                ],
+                correctAnswer: 0
+            }
+        ],
+        'C': [
+            {
+                question: "Маркированный алкоголь при поступлении на склад попадает в:",
+                options: [
+                    "Регистр №2 (Виртуальный торговый зал).",
+                    "Регистр №3 (Хранилище кодов марок).",
+                    "Регистр №1 (Виртуальный склад) и остается там до продажи.",
+                    "Сразу списывается в продажу."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Статус марки «к оприходованию» означает, что:",
+                options: [
+                    "товар списан с баланса.",
+                    "накладная принята в ЕГАИС, но магазин еще не подтвердил приемку на свой баланс.",
+                    "марка была зарезервирована при перемещении между складами.",
+                    "товар физически отсутствует, но документы оформлены."
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Что произойдет, если попытаться принять поставку без ТТН из ЕГАИС?",
+                options: [
+                    "Товар можно будет принять, а ТТН получить позже.",
+                    "Приемка будет невозможна, так как это обязательное условие.",
+                    "Система автоматически сгенерирует ТТН.",
+                    "Товар будет принят на Регистр №2 в обход Регистра №1."
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Где в УТМ можно найти свой FSRAR ID?",
+                options: [
+                    "В разделе «Документы».",
+                    "В разделе «Журналы».",
+                    "В разделе «Сертификаты».",
+                    "В разделе «Справочники»."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Справка Б в системе ЕГАИС:",
+                options: [
+                    "создается производителем и содержит данные о дате розлива.",
+                    "формируется автоматически системой при отгрузке продукции контрагенту.",
+                    "используется для списания акцизных марок.",
+                    "хранится в Регистре №3."
+                ],
+                correctAnswer: 1
+            }
+        ],
+        'D': [
+            {
+                question: "В чем ключевое отличие учета пива и крепкого алкоголя в ЕГАИС для розничной точки?",
+                options: [
+                    "Для пива не требуется подавать декларацию об оборотах.",
+                    "Для пива не требуется подключение к ЕГАИС.",
+                    "Для пива не требуется побутылочная фиксация факта продажи, в отличие от крепкого алкоголя.",
+                    "Учет идентичен."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Статус марки «в наличии(к отмене проведения)» likely indicates that:",
+                options: [
+                    "марка ожидает своей активации.",
+                    "марка была считана с ошибкой.",
+                    "ожидается отмена проведения марки в рамках какой-либо ТТН.",
+                    "марка находится на балансе и готова к продаже."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "При получении статуса «Ошибка чтения статуса» для акцизной марки, что рекомендуется сделать в последнюю очередь?",
+                options: [
+                    "Проверить соединение с ЕГАИС.",
+                    "Убедиться в корректности введенных данных марки.",
+                    "Немедленно списать эту бутылку как брак.",
+                    "Обратиться в техническую поддержку, если проблема не устраняется."
+                ],
+                correctAnswer: 3
+            },
+            {
+                question: "Алкоголь без акцизной марки при постановке на баланс для продажи попадает в:",
+                options: [
+                    "Регистр №1.",
+                    "Регистр №2.",
+                    "Регистр №3.",
+                    "не попадает в ЕГАИС."
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Для работы с ЕГАИС юридическому лицу необходимо:",
+                options: [
+                    "иметь штат не менее 10 человек.",
+                    "получить алкогольную лицензию и иметь уставный капитал не ниже установленного в регионе.",
+                    "быть самозанятым гражданином.",
+                    "использовать только определенные модели сканеров."
+                ],
+                correctAnswer: 1
+            }
+        ],
+        'E': [
+            {
+                question: "Можно ли индивидуальному предпринимателю получить лицензию на розничную продажку крепкого алкоголя?",
+                options: [
+                    "Да, без ограничений.",
+                    "Да, но только для продажи пива.",
+                    "Нет, лицензию может получить только юридическое лицо.",
+                    "Нет, алкогольные лицензии не выдаются вообще."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Что из перечисленного НЕ входит в основные возможности УТМ?",
+                options: [
+                    "Получение данных о компаниях и товарах в формате справочников.",
+                    "Пересылка ФД с ККМ.",
+                    "Автоматическое производство алкогольной продукции.",
+                    "Запрос и прием ТТН."
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Какой из статусов марки НЕ является промежуточным (транзитным)?",
+                options: [
+                    "«в резерве»",
+                    "«к постановке на баланс»",
+                    "«в наличии»",
+                    "«к оприходованию»"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "После продажи маркированного алкоголя количественно он списывается с Регистра №1, а помарочно — с Регистра №3. Что произойдет, если списание с Регистра №3 не произойдет?",
+                options: [
+                    "Ничего, главное — списание количества.",
+                    "Марка останется в системе со статусом «в наличии», что приведет к расхождению учета.",
+                    "Система автоматически исправит ошибку при следующем обмене.",
+                    "Поставщик получит уведомление о необходимости вернуть товар."
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Для чего нужна усиленная квалифицированная электронная подпись (УКЭП) для работы с ЕГАИС?",
+                options: [
+                    "Для подписи бумажных накладных.",
+                    "Для шифрования локальной базы данных УТМ.",
+                    "Для идентификации и юридически значимого взаимодействия с государственной системой ЕГАИС.",
+                    "Для получения скидок от поставщиков."
+                ],
+                correctAnswer: 2
+            }
+        ]
     }
 };
 
@@ -1316,9 +1578,74 @@ let currentPageQuestions = null;
 let currentPart = 'A';
 let currentQuestionIndex = 0;
 let selectedAnswer = null;
+let shuffledQuestions = {}; // Храним перемешанные вопросы для каждой части
+let currentShuffledAnswers = []; // Текущие перемешанные ответы для отображения
+let currCount = 0;
+let countA = 0;
+let countB = 0;
+let countC = 0;
+let countD = 0;
+let countE = 0;
 
 // Элементы DOM
-let questionElement, progressElement, progressPartsElement, checkboxes, labels, nextBtn, feedbackElement;
+let questionElement, progressElement, progressPartsElement, checkboxes, labels, nextBtn, feedbackElement, nextBt, startBt;
+
+// Функция для перемешивания массива (алгоритм Фишера-Йейтса)
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+// Функция для перемешивания вопросов в части
+function shuffleQuestionsForPart(partQuestions) {
+    return partQuestions.map(question => {
+        // Создаем массив индексов ответов [0, 1, 2, 3]
+        const answerIndices = question.options.map((_, index) => index);
+        // Перемешиваем индексы
+        const shuffledIndices = shuffleArray(answerIndices);
+        
+        // Создаем новые перемешанные варианты ответов
+        const shuffledOptions = shuffledIndices.map(index => question.options[index]);
+        
+        // Находим новый индекс правильного ответа
+        const newCorrectAnswer = shuffledIndices.indexOf(question.correctAnswer);
+        
+        return {
+            ...question,
+            options: shuffledOptions,
+            correctAnswer: newCorrectAnswer,
+            originalCorrectAnswer: question.correctAnswer, // Сохраняем оригинальный для отладки
+            shuffleMap: shuffledIndices // Сохраняем карту перемешивания
+        };
+    });
+}
+
+// Функция для сброса счетчиков
+function resetCounters() {
+    currCount = 0;
+    countA = 0;
+    countB = 0;
+    countC = 0;
+    countD = 0;
+    countE = 0;
+}
+
+// Функция для увеличения счетчика текущей части
+function incrementPartCounter(isCorrect) {
+    if (isCorrect) {
+        switch (currentPart) {
+            case 'A': countA++; break;
+            case 'B': countB++; break;
+            case 'C': countC++; break;
+            case 'D': countD++; break;
+            case 'E': countE++; break;
+        }
+    }
+}
 
 // Инициализация теста
 function initTest() {
@@ -1333,6 +1660,15 @@ function initTest() {
         return;
     }
 
+    // Сбрасываем счетчики при инициализации
+    resetCounters();
+
+    // Перемешиваем вопросы для всех частей
+    shuffledQuestions = {};
+    for (const part in currentPageQuestions) {
+        shuffledQuestions[part] = shuffleQuestionsForPart(currentPageQuestions[part]);
+    }
+
     // Находим элементы только после загрузки DOM
     questionElement = document.getElementById('question');
     progressElement = document.querySelector('.progress');
@@ -1341,6 +1677,8 @@ function initTest() {
     labels = document.querySelectorAll('.padding label');
     nextBtn = document.querySelector('.next-btn');
     feedbackElement = document.getElementById('feedback');
+    nextBt = document.getElementById('nextTBtn');
+    startBt = document.getElementById('startBtn');
 
     // Проверяем, что все элементы найдены
     if (!questionElement || !progressElement || !progressPartsElement || checkboxes.length === 0 || labels.length === 0 || !nextBtn || !feedbackElement) {
@@ -1348,13 +1686,17 @@ function initTest() {
         return;
     }
 
+    // Скрываем кнопки "В начало" и "Следующий тест" при старте
+    if (nextBt) nextBt.style.display = 'none';
+    if (startBt) startBt.style.display = 'none';
+
     showQuestion(currentQuestionIndex);
     setupEventListeners();
 }
 
 // Показать вопрос
 function showQuestion(index) {
-    const questions = currentPageQuestions[currentPart];
+    const questions = shuffledQuestions[currentPart];
     const question = questions[index];
 
     if (questionElement) {
@@ -1410,7 +1752,7 @@ function hideFeedback() {
 function setupEventListeners() {
     if (checkboxes && checkboxes.length > 0) {
         checkboxes.forEach((checkbox, index) => {
-            checkbox.addEventListener('change', function () {
+            checkbox.addEventListener('change', function() {
                 if (this.checked) {
                     checkboxes.forEach((cb, i) => {
                         if (i !== index) {
@@ -1425,26 +1767,45 @@ function setupEventListeners() {
             });
         });
     }
-
+    
     if (nextBtn) {
         nextBtn.addEventListener('click', nextQuestion);
     }
+
+    // Добавляем обработчики для кнопок "В начало" и "Следующий тест"
+    if (nextBt) {
+        nextBt.addEventListener('click', function() {
+            // Логика перехода к следующему тесту
+            const currentPage = window.location.pathname.split('/').pop();
+            const pageNumber = parseInt(currentPage.replace('index', '').replace('.html', ''));
+            if (pageNumber < 6) {
+                window.location.href = `index${pageNumber + 1}.html`;
+            }
+        });
+    }
+
+    if (startBt) {
+    startBt.addEventListener('click', function() {
+        // Возврат на главную страницу
+        window.location.href = 'index.html';
+    });
+}
 }
 
-// Проверка ответа
 // Проверка ответа
 function checkAnswer() {
     if (selectedAnswer === null) return;
 
-    const questions = currentPageQuestions[currentPart];
-    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+    const questions = shuffledQuestions[currentPart];
+    const question = questions[currentQuestionIndex];
+    const correctAnswer = question.correctAnswer;
     const isCorrect = selectedAnswer === correctAnswer;
 
     if (checkboxes && checkboxes.length > 0) {
         checkboxes.forEach(checkbox => {
             checkbox.disabled = true;
         });
-
+        
         checkboxes.forEach((checkbox, index) => {
             if (checkbox.parentElement) {
                 if (index === correctAnswer) {
@@ -1455,26 +1816,30 @@ function checkAnswer() {
             }
         });
     }
-
+    
     if (feedbackElement) {
-        feedbackElement.textContent = isCorrect ?
-            "✓ Правильно!" :
+        feedbackElement.textContent = isCorrect ? 
+            "✓ Правильно!" : 
             "✗ Неправильно!";
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
         feedbackElement.style.display = 'block';
     }
-
+    
     if (nextBtn) {
         nextBtn.style.display = 'block';
+    }
+
+    if (isCorrect) {
+        currCount++;
+        incrementPartCounter(true); // Увеличиваем счетчик текущей части
     }
 }
 
 // Следующий вопрос
 function nextQuestion() {
-    const questions = currentPageQuestions[currentPart];
     currentQuestionIndex++;
-
-    if (currentQuestionIndex < questions.length) {
+    
+    if (currentQuestionIndex < shuffledQuestions[currentPart].length) {
         showQuestion(currentQuestionIndex);
     } else {
         goToNextPart();
@@ -1485,7 +1850,7 @@ function nextQuestion() {
 function goToNextPart() {
     const parts = ['A', 'B', 'C', 'D', 'E'];
     const currentIndex = parts.indexOf(currentPart);
-
+    
     if (currentIndex < parts.length - 1) {
         currentPart = parts[currentIndex + 1];
         currentQuestionIndex = 0;
@@ -1495,10 +1860,15 @@ function goToNextPart() {
     }
 }
 
-// Завершение теста
 function completeTest() {
     if (questionElement) {
-        questionElement.textContent = "Тест завершен! Поздравляем!";
+        questionElement.innerHTML = `Тест завершен! Поздравляем!<br>
+        Всего: ${currCount} правильных ответов из 25<br>
+        Часть A: ${countA} из 5<br>
+        Часть B: ${countB} из 5<br>
+        Часть C: ${countC} из 5<br>
+        Часть D: ${countD} из 5<br>
+        Часть E: ${countE} из 5`;
     }
 
     const paddingElements = document.querySelectorAll('.padding');
@@ -1511,10 +1881,23 @@ function completeTest() {
     if (nextBtn) {
         nextBtn.style.display = 'none';
     }
+    
+    if (nextBt) {
+        nextBt.style.display = 'block';
+    }
+    
+    if (startBt) {
+        startBt.style.display = 'block';
+    }
+    
     if (feedbackElement) {
         feedbackElement.style.display = 'none';
     }
-
+    
+    if (progressPartsElement) {
+        progressPartsElement.style.display = 'none';
+    }
+    
     if (progressElement) {
         progressElement.textContent = "Все части пройдены";
     }
