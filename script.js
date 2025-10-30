@@ -1432,6 +1432,7 @@ function setupEventListeners() {
 }
 
 // Проверка ответа
+// Проверка ответа
 function checkAnswer() {
     if (selectedAnswer === null) return;
 

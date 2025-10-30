@@ -117,17 +117,23 @@
      border: 2px solid;
  }
 
- .feedback.correct {
-     background-color: #f0fff0;
-     color: #2d5a2d;
-     border-color: #90ee90;
- }
+ 
+.correct {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724 !important;
+}
 
- .feedback.incorrect {
-     background-color: #fff0f0;
-     color: #8b0000;
-     border-color: #ff9999;
- }
+.incorrect {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+}
+
+.padding.correct label,
+.padding.incorrect label {
+    color: inherit !important;
+}
 
  /* Стили для выбранного варианта */
  .padding.selected {
