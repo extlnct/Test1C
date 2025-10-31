@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <script src="questions.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -42,20 +43,24 @@
         </div>
 
 
-        <button class="next-btn" type="button">
-            Следующий вопрос
+        <div style="display: flex; flex-direction: column;">
+            <div class="feedback" id="feedback"></div>
+            <button class="next-btn" type="button">
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Следующий вопрос &nbsp; ➤➤➤
         </button>
-
-
-        <div class="feedback" id="feedback"></div>
-        <div style="display: flex;">
-            <button class="start-btn" type="button" id="startBtn">
-                
-                В начало
-            </button>
         </div>
 
+        <div style="display: flex; ">
+            <button class="start-btn" type="button" id="startBtn">
 
+                В начало
+            </button>
+
+            <button class="nextT-btn" type="button" id="nextTBtn">
+
+                Следующий тест
+            </button>
+        </div>
     </div>
 
 </body>

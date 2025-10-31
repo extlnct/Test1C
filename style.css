@@ -3,7 +3,7 @@
      max-width: 700px;
      margin: 50px auto;
      padding: 20px;
-     background: linear-gradient(115deg, #ff2525 0%, #ffeb66 100%);
+     background: linear-gradient(115deg, #e30707 0%, #ffeb66 100%);
      min-height: calc(100vh - 100px);
  }
 
@@ -87,9 +87,11 @@
 
  .next-btn {
      display: block;
-     width: 100%;
+     width: 80%;
+     margin: 0 auto;
+     height: 55px;
      padding: 15px;
-     background: linear-gradient(to bottom, #ff3333, #cc0000);
+     background: linear-gradient(5deg, #cc0000 0%, #ff3333 85%);
      color: white;
      border: none;
      border-radius: 6px;
@@ -111,7 +113,7 @@
      display: none;
      width: 50%;
      padding: 15px;
-     background: linear-gradient(to bottom, #ffdd33, #ccaa00);
+    background: linear-gradient(to bottom, #ff4040, #a10000);
      color: white;
      border: none;
      border-radius: 6px;
@@ -126,7 +128,7 @@
  }
 
  .start-btn:hover {
-     background: linear-gradient(to bottom, #c99e04, #ad8e03);
+     background: linear-gradient(to bottom, #dc3737, #800000);
      box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
  }
 
@@ -135,7 +137,7 @@
      width: 50%;
      padding: 15px;
      margin-left: 15px;
-     background: linear-gradient(to bottom, #ff3333, #cc0000);
+     background: linear-gradient(to bottom, #ff4040, #a10000);
      color: white;
      border: none;
      border-radius: 6px;
@@ -149,18 +151,20 @@
  }
 
  .nextT-btn:hover {
-     background: linear-gradient(to bottom, #cc0000, #990000);
+      background: linear-gradient(to bottom, #dc3737, #800000);
      box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
  }
 
 
  .feedback {
-     padding: 15px;
+     padding: 5px;
      border-radius: 6px;
-     margin: 20px 0;
+     margin: 10px auto 0;
      text-align: center;
      font-weight: bold;
      display: none;
+     height: 24px;
+     width: 250px;
      border: 2px solid;
  }
 
