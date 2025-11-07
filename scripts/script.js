@@ -329,7 +329,7 @@ function checkAnswer() {
     if (feedbackElement) {
         feedbackElement.innerHTML = isCorrect ?
             "🖤 Правильно! 🖤" :
-            `<img src='../test-1C/images/heart.png' style='width:12px'> Неправильно! <img src='../test-1C/images/heart.png' style='width: 12px'>`;
+            `<img src='../images/heart.png' style='width:12px'> Неправильно! <img src='../images/heart.png' style='width: 12px'>`;
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
         feedbackElement.style.display = 'block';
     }
