@@ -58,6 +58,7 @@ function stopTimer() {
     if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
+       
     }
 }
 
@@ -333,7 +334,7 @@ function setupEventListeners() {
             const currentPage = window.location.pathname.split('/').pop();
             const pageNumber = parseInt(currentPage.replace('index', '').replace('.html', ''));
             if (pageNumber < 17) {
-                window.location.href = `index${pageNumber + 1}.html`;
+                window.location.href = `../index${pageNumber + 1}.html`;
             }
         });
     }
@@ -342,7 +343,7 @@ function setupEventListeners() {
         startBt.addEventListener('click', function () {
             stopTimer();
             // Возврат на главную страницу
-            window.location.href = 'index.html';
+            window.location.href = '../index.html';;
         });
     }
 }
@@ -417,6 +418,7 @@ function goToNextPart() {
 
 function completeTest() {
     stopTimer();
+
     if (questionElement) {
         questionElement.innerHTML = `Тест завершен! Поздравляем!<br>
         Всего: ${currCount} правильных ответов из 25<br>
