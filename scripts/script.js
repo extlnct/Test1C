@@ -11,8 +11,9 @@ let countB = 0;
 let countC = 0;
 let countD = 0;
 let countE = 0;
-let totalTime = 15 * 60; // 30 минут в секундах
+let totalTime = 15 * 60; // 15 минут в секундах
 let timerInterval = null;
+let isAnswerSelected = false; // Флаг, что ответ уже выбран
 
 
 function startTimer() {
@@ -119,6 +120,7 @@ function resetCounters() {
     countC = 0;
     countD = 0;
     countE = 0;
+    isAnswerSelected = false;
 }
 
 // Функция для увеличения счетчика текущей части
@@ -215,6 +217,10 @@ function showQuestion(index) {
         nextBtn.style.display = 'none';
     }
     selectedAnswer = null;
+    isAnswerSelected = false;
+    
+    // Разблокируем все элементы для нового вопроса
+    enableAnswerElements();
 }
 
 // Сброс чекбоксов
@@ -226,6 +232,27 @@ function resetCheckboxes() {
             if (checkbox.parentElement) {
                 checkbox.parentElement.classList.remove('correct', 'incorrect');
             }
+        });
+    }
+}
+
+// Включить элементы ответа
+function enableAnswerElements() {
+    if (paddingElements && paddingElements.length > 0) {
+        paddingElements.forEach(padding => {
+            padding.style.pointerEvents = 'auto';
+            padding.style.opacity = '1';
+        });
+    }
+}
+
+// Заблокировать элементы ответа
+function disableAnswerElements() {
+    if (paddingElements && paddingElements.length > 0) {
+        paddingElements.forEach(padding => {
+            padding.style.pointerEvents = 'none';
+            // Можно добавить легкое затемнение для визуального обозначения блокировки
+            padding.style.opacity = '0.9';
         });
     }
 }
@@ -243,14 +270,22 @@ function setupEventListeners() {
     // Обработчики для клика по блоку ответа
     if (paddingElements && paddingElements.length > 0) {
         paddingElements.forEach((padding, index) => {
-            padding.addEventListener('click', function () {
+            padding.addEventListener('click', function() {
+                // Если ответ уже выбран, игнорируем клик
+                if (isAnswerSelected) return;
+                
                 // Снимаем выделение со всех чекбоксов
                 checkboxes.forEach((cb, i) => {
                     cb.checked = i === index;
                 });
-
+                
                 // Устанавливаем выбранный ответ
                 selectedAnswer = index;
+                isAnswerSelected = true;
+                
+                // Блокируем все элементы ответа
+                disableAnswerElements();
+                
                 checkAnswer();
             });
         });
@@ -260,6 +295,12 @@ function setupEventListeners() {
     if (checkboxes && checkboxes.length > 0) {
         checkboxes.forEach((checkbox, index) => {
             checkbox.addEventListener('change', function () {
+                // Если ответ уже выбран, игнорируем изменение
+                if (isAnswerSelected) {
+                    this.checked = false;
+                    return;
+                }
+                
                 if (this.checked) {
                     checkboxes.forEach((cb, i) => {
                         if (i !== index) {
@@ -267,6 +308,11 @@ function setupEventListeners() {
                         }
                     });
                     selectedAnswer = index;
+                    isAnswerSelected = true;
+                    
+                    // Блокируем все элементы ответа
+                    disableAnswerElements();
+                    
                     checkAnswer();
                 } else {
                     selectedAnswer = null;
