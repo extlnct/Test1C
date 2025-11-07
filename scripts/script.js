@@ -334,7 +334,7 @@ function setupEventListeners() {
             const currentPage = window.location.pathname.split('/').pop();
             const pageNumber = parseInt(currentPage.replace('index', '').replace('.html', ''));
             if (pageNumber < 17) {
-                window.location.href = `../index${pageNumber + 1}.html`;
+                window.location.href = `../pages/index${pageNumber + 1}.html`;
             }
         });
     }
