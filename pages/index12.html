@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="questions.js"></script>
-    <script src="script.js"></script>
+    <title>Проведение документов</title>
+    <link href="/test-1C/styles/style.css" rel="stylesheet">
+    <script src="/test-1C/scripts/questions.js"></script>
+    <script src="/test-1C/scripts/script.js"></script>
 </head>
 
 <body>
@@ -16,8 +16,12 @@
     <div class="test-container">
         <div style="display: flex; margin-bottom: 15px;">
             <p class="progressParts">Часть А</p>
-
-            <p class="progress" style="padding: 0 0 0 400px;">Вопрос 1 из 5</p>
+            <div class="timer-container">
+                <img src="/test-1C/images/hourgl-start.png" style="width: 22px;">
+                <span class="timer" id="timer">30:00</span>
+                <img src="/test-1C/images/hourgl-end.png" style="width: 22px;">
+            </div>
+            <p class="progress" >Вопрос 1 из 5</p>
         </div>
 
         <div class="question" id="question">Текст вопроса</div>

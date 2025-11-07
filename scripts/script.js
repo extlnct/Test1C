@@ -1,4 +1,3 @@
-
 // Глобальные переменные
 let currentPageQuestions = null;
 let currentPart = 'A';
@@ -12,9 +11,57 @@ let countB = 0;
 let countC = 0;
 let countD = 0;
 let countE = 0;
+let totalTime = 15 * 60; // 30 минут в секундах
+let timerInterval = null;
+
+
+function startTimer() {
+    const timerElement = document.getElementById('timer');
+
+    // Останавливаем предыдущий таймер если был
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+
+    totalTime = 15 * 60; // Сбрасываем время
+    updateTimerDisplay();
+
+    timerInterval = setInterval(() => {
+        totalTime--;
+        updateTimerDisplay();
+
+        if (totalTime <= 0) {
+            clearInterval(timerInterval);
+            completeTest();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+        const minutes = Math.floor(totalTime / 60);
+        const seconds = totalTime % 60;
+        timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        // Меняем цвет при малом времени
+        if (totalTime <= 300) { // 5 минут
+            timerElement.style.color = '#ff4444';
+        } else {
+            timerElement.style.color = '';
+        }
+    }
+}
+
+function stopTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
 
 // Элементы DOM
-let questionElement, progressElement, progressPartsElement, checkboxes, labels, nextBtn, feedbackElement, nextBt, startBt;
+let questionElement, progressElement, progressPartsElement, checkboxes, labels, nextBtn, feedbackElement, nextBt, startBt, paddingElements;
 
 // Функция для перемешивания массива (алгоритм Фишера-Йейтса)
 function shuffleArray(array) {
@@ -119,12 +166,15 @@ function initTest() {
     feedbackElement = document.getElementById('feedback');
     nextBt = document.getElementById('nextTBtn');
     startBt = document.getElementById('startBtn');
+    paddingElements = document.querySelectorAll('.padding');
 
     // Проверяем, что все элементы найдены
     if (!questionElement || !progressElement || !progressPartsElement || checkboxes.length === 0 || labels.length === 0 || !nextBtn || !feedbackElement) {
         console.error('Не все элементы найдены в DOM');
         return;
     }
+
+    startTimer();
 
     // Скрываем кнопки "В начало" и "Следующий тест" при старте
     if (nextBt) nextBt.style.display = 'none';
@@ -190,6 +240,23 @@ function hideFeedback() {
 
 // Настройка обработчиков событий
 function setupEventListeners() {
+    // Обработчики для клика по блоку ответа
+    if (paddingElements && paddingElements.length > 0) {
+        paddingElements.forEach((padding, index) => {
+            padding.addEventListener('click', function () {
+                // Снимаем выделение со всех чекбоксов
+                checkboxes.forEach((cb, i) => {
+                    cb.checked = i === index;
+                });
+
+                // Устанавливаем выбранный ответ
+                selectedAnswer = index;
+                checkAnswer();
+            });
+        });
+    }
+
+    // Обработчики для чекбоксов (на случай прямого клика по чекбоксу)
     if (checkboxes && checkboxes.length > 0) {
         checkboxes.forEach((checkbox, index) => {
             checkbox.addEventListener('change', function () {
@@ -215,6 +282,7 @@ function setupEventListeners() {
     // Добавляем обработчики для кнопок "В начало" и "Следующий тест"
     if (nextBt) {
         nextBt.addEventListener('click', function () {
+            stopTimer();
             // Логика перехода к следующему тесту
             const currentPage = window.location.pathname.split('/').pop();
             const pageNumber = parseInt(currentPage.replace('index', '').replace('.html', ''));
@@ -226,6 +294,7 @@ function setupEventListeners() {
 
     if (startBt) {
         startBt.addEventListener('click', function () {
+            stopTimer();
             // Возврат на главную страницу
             window.location.href = 'index.html';
         });
@@ -260,7 +329,7 @@ function checkAnswer() {
     if (feedbackElement) {
         feedbackElement.innerHTML = isCorrect ?
             "🖤 Правильно! 🖤" :
-            `<img src='heart.png' style='width:12px'> Неправильно! <img src='heart.png' style='width: 12px'>`;
+            `<img src='/test-1C/images/heart.png' style='width:12px'> Неправильно! <img src='/test-1C/images/heart.png' style='width: 12px'>`;
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
         feedbackElement.style.display = 'block';
     }
@@ -301,6 +370,7 @@ function goToNextPart() {
 }
 
 function completeTest() {
+    stopTimer();
     if (questionElement) {
         questionElement.innerHTML = `Тест завершен! Поздравляем!<br>
         Всего: ${currCount} правильных ответов из 25<br>
