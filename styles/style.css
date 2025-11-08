@@ -1,4 +1,9 @@
- body {
+html{
+    cursor: url('../cursors/Main2.cur'), url('../cursors/Main2.cur'), auto;
+}
+
+body {
+     cursor: url('../cursors/Main2.cur'), url('../cursors/Main2.cur'), auto;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      max-width: 700px;
      margin: 50px auto;
@@ -55,7 +60,7 @@
  }
 
  .progress {
-    padding-left: 25%;
+     padding-left: 25%;
      font-size: 18px;
      font-weight: bold;
      color: #e61818b8;
@@ -76,6 +81,7 @@
  }
 
  .padding {
+     cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      margin: 12px 0;
      padding: 15px;
      border: 2px solid #e6e6e6;
@@ -87,26 +93,35 @@
  }
 
  .padding:hover {
+     cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      background-color: #fff0f0;
      border-color: #ff9999;
      transform: translateY(-2px);
  }
 
  input[type="checkbox"] {
+     cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      width: 20px;
      height: 20px;
      margin-right: 15px;
      accent-color: #ff3333;
      cursor: pointer;
  }
-
+input[type="checkbox"]:hover{
+    cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
+}
  label {
+    cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      font-size: 16px;
      color: #333;
      cursor: pointer;
  }
+ label:hover{
+    cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
+ }
 
  .next-btn {
+     cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      display: block;
      width: 80%;
      margin: 0 auto;
@@ -126,6 +141,7 @@
  }
 
  .next-btn:hover {
+     cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      background: linear-gradient(to bottom, #cc0000, #990000);
      box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
  }
@@ -149,6 +165,7 @@
  }
 
  .start-btn:hover {
+    cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      background: linear-gradient(to bottom, #dc3737, #800000);
      box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
  }
@@ -172,6 +189,7 @@
  }
 
  .nextT-btn:hover {
+    cursor: url('../cursors/Pointer.cur'), url('../cursors/Pointer.cur'), pointer;
      background: linear-gradient(to bottom, #dc3737, #800000);
      box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
  }
